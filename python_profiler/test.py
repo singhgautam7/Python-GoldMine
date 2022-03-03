@@ -15,9 +15,9 @@ def custom_sort(ip_list):
 
 
 if __name__ == '__main__':
-    import profiling
+    import main
     
     ip = [12345,"Happy","very",1234,"I","am",1,12,123,"excited"]
     print("input", ip)
-    profiling.print_total_time_to_run(custom_sort, ip)
-    profiling.print_time_breakdown(custom_sort, ip)
+    main.print_total_time_to_run(custom_sort, ip)
+    main.print_time_breakdown(custom_sort, ip)
