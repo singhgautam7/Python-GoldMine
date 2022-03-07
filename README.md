@@ -7,3 +7,4 @@ Just a collection of various python packages created by me for generic use cases
 | S.No. | Title | Description | Code | 
 | -- | --- | --- | --- |
 | 0 | Profiler | Find slow pieces in your python function | [Link](https://github.com/singhgautam7/Python-GoldMine/tree/master/python_profiler) |
+| 0 | Gcloud Custom Roles | Manage your Google cloud custom roles via python scripts with 1 time set-up | [Link](https://github.com/singhgautam7/Python-GoldMine/tree/master/gcloud_iam_custom_roles) |
