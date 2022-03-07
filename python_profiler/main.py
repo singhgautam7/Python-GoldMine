@@ -24,7 +24,7 @@ def print_total_time_to_run(target_function, *args, **kwargs):
 
 def print_time_breakdown(target_function, *args, **kwargs):
     """
-    This will breakdown your function in terms of maximum time-
+    This will break down your function in terms of maximum time-
     taking areas of code
     
     You can just import this function and pass your function as an
@@ -48,5 +48,5 @@ def print_time_breakdown(target_function, *args, **kwargs):
 
 
 if __name__ == '__main__':
-    # If the file is ran as a script, do nothing
+    # If the file is run as a script, do nothing
     pass
