@@ -1,9 +1,9 @@
 import json
 
-from googleapiclient import discovery
+from googleapiclient import discovery, errors
 from oauth2client.client import GoogleCredentials
 
-from gcloud_iam_custom_roles import config
+import config
 
 credentials = GoogleCredentials.get_application_default()
 service = discovery.build('iam', 'v1', credentials=credentials)
@@ -53,12 +53,11 @@ class HelperGCloud:
         """
         Returns: Dictionary of roles details
         """
-        import googleapiclient
         try:
             request = service.projects().roles().get(name=config.absolute_role_name)
             response = request.execute()
             return response
-        except googleapiclient.errors.HttpError:
+        except errors.HttpError:
             return {}
 
     @staticmethod
@@ -120,5 +119,5 @@ if __name__ == '__main__':
         print(f'\nRole found with ID {config.ROLE_ID}.\nUPDATING ROLE')
         role_info = HelperGCloud.update_role()
 
-    print(f'\n\nThe {"NEW" if not bool(init_role_info) else "UPDATED"} role is - \n')
+    print(f'\n\nThe {"NEW" if not bool(init_role_info) else "UPDATED"} role is - ')
     print(json.dumps(role_info, indent=4))

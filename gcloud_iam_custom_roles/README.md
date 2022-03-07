@@ -8,6 +8,7 @@ Here is the [link](https://cloud.google.com/iam/docs/reference/rest/v1/projects.
 - After above step is completed, run the command `gcloud beta auth application-default login`
   - Make sure the account you log in with has the following permissions:
     - iam.roles.get, iam.roles.create, iam.roles.update
+- Make sure **python** is installed in your system/environment.
 - Install other requirements using this command: 
   - For python 2 `pip install -r requirements.txt` 
   - For python 3 `pip3 install -r requirements.txt`
@@ -15,6 +16,9 @@ Here is the [link](https://cloud.google.com/iam/docs/reference/rest/v1/projects.
   - **Note:** You can ask the admin or your manager to give you the already existing `.env` file over a secure mode of transfer, for you to directly use it.
   - Don't worry about downloading the packages as it has been taken care of in the above step.
   - You can learn more about creating .env file from this [link](https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1).
+- **Run** the `main.py` file using the command:
+  - For python 2 `python .\main.py`
+  - For python 3 `python3 .\main.py`
 
 ### Example .env file format
 ```
