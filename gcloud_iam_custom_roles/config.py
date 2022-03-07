@@ -1,16 +1,6 @@
 """
 A file to import all the variables from env file.
 Keys required in .env files are
-
-PROJECT_ID - <type: str>
-ORG_ID - <type: str>
-ROLE_ID - <type: str>
-ROLE_TITLE - <type: str>
-ROLE_DESCRIPTION - <type: str>
-ROLE_PERMISSIONS - <type: list>
-
-Note: ROLE_PERMISSIONS should be list enclosed within single inverted commas, with every value enclosed within double
-inverted commas. Example: ROLE_PERMISSIONS='["Foo", "bar"]'
 """
 import json
 import os
