@@ -17,3 +17,7 @@ It uses **ANSI Escape Codes** to format the standard output.
   
 ### Example Outputs  
   ![output example](https://raw.githubusercontent.com/singhgautam7/Python-GoldMine/master/color_print/assets/prettify_print_example.png)
+
+
+## References
+- [geeksForGeeks](https://www.geeksforgeeks.org/)
