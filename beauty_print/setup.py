@@ -8,7 +8,7 @@ setup(
     description='Colored Output - c_out. Python print with a style!',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version='0.9',
+    version='1.0',
     license='MIT',
     author="Gautam Rajeev Singh",
     author_email='gautamsingh1997@gmail.com',
