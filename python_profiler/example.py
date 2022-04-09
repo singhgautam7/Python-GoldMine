@@ -1,7 +1,7 @@
 # Question 1: sort list without creating another list as per give order
 # input list=[12345,"Happy","very",1234,"I","am",1,12,123,"excited" ]
 # output list=[1,12,123,1234,12345,"I","am","very","Happy","excited"]
-from python_profiler import main
+import main
 
 
 def key_function(x):
