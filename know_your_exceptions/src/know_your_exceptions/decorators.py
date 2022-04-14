@@ -28,8 +28,8 @@ def exc_finder(func):
                 exc_name_str = clr_print_red.format(e.__class__.__name__)
                 final_str = f'{from_str} {module_name_str} {import_str} {exc_name_str}'
                 suggestion_str = f'You need to import the following statment to handle this exception.\n'\
-                                 f'(Note: if the suggestion is wrong, please report this to developer)\n\n'\
-                                 f'{final_str} \n\nAfter this import you can handle the error in line {e.__traceback__.tb_lineno} '\
+                                 f'(Note: In case the suggestion is not working, please report this to the developer)\n\n'\
+                                 f'{final_str} \n\nAfter importing, you can handle the error in line {e.__traceback__.tb_lineno} '\
                                  f'using try-except block.'
             
             print(
