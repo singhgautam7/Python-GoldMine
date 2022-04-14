@@ -1,6 +1,6 @@
 # Introduction
 
-Exception handling is one of the most cruicial part of the coding practices. And it is always a good idea to handle the specific exception using try-except rather than just handling the *Exception* class in Python. This package can help you achieve the same.
+Exception handling is one of the most cruicial part of the coding practices. And it is always a good idea to handle the specific exception using try-except rather than just using the gereral *Exception* class. This package can help you achieve the same. You can find out the exact name of the package and the import statement (if needed) for handling all your exceptions.
 
 # Steps
 
@@ -10,4 +10,4 @@ Exception handling is one of the most cruicial part of the coding practices. And
 
 # Example Response
 
-![Example response](../_assets/know_your_exceptions_example.png/)
+![Example response](https://raw.githubusercontent.com/singhgautam7/Python-GoldMine/master/_assets/know_your_exceptions_example.png)

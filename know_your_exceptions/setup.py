@@ -8,7 +8,7 @@ setup(
     description='Identitfy the exact exception class',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version='0.2',
+    version='0.3',
     license='MIT',
     author="Gautam Rajeev Singh",
     author_email='gautamsingh1997@gmail.com',
