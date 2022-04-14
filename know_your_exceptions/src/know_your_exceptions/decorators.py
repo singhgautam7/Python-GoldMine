@@ -14,8 +14,6 @@ def exc_finder(func):
             exc_module_name = f'\x1b[6;30;42m {e.__class__.__module__} \x1b[0m'
             file_name = f'\x1b[6;30;42m {os.path.basename(__file__)} \x1b[0m'
             
-            print(f'{exc_module_name = }')
-            
             # If module is name is builtins, do not import anything
             if e.__class__.__module__ == 'builtins':
                 suggestion_str = f'Just handle the {e.__class__.__name__} in line {e.__traceback__.tb_lineno} using try-except block.'
@@ -35,7 +33,7 @@ def exc_finder(func):
                                  f'using try-except block.'
             
             print(
-                    f'An exception named {exc_name} from module {exc_module_name} has occurred ' \
+                    f'\nAn exception named {exc_name} from module {exc_module_name} has occurred ' \
                     f'{line_num} of your function {func_name} in your {file_name} file.\n\n'\
                     f'SUGGESTION(s):\n{suggestion_str}\n'
                 )

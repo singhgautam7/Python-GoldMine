@@ -4,6 +4,10 @@ Exception handling is one of the most cruicial part of the coding practices. And
 
 # Steps
 
-1. Install the package using `pip install know-your-exception`
-2. Import the decorator in your file
+1. Install the package using `pip install know-your-exceptions`
+2. Import the decorator in your file using `from know_your_exceptions.decorators import exc_finder`
 3. Add this decorator over your function, and make sure that you function does not have any *try-except* block (so that this package can suggest you accurate exception handling method)
+
+# Example Response
+
+![Example response](_assets_/know_your_exceptions_example.png?raw=true)
