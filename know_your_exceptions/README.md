@@ -10,4 +10,4 @@ Exception handling is one of the most cruicial part of the coding practices. And
 
 # Example Response
 
-![Example response](_assets_/know_your_exceptions_example.png?raw=true)
+![Example response](../_assets/know_your_exceptions_example.png/)
