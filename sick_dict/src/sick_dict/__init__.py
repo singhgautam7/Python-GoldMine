@@ -1,4 +1,4 @@
-class BigDict(dict):
+class SickDict(dict):
     """An IDE friendly dictionary"""
 
     def __init__(self, *args, **kwargs):
@@ -41,19 +41,19 @@ class BigDict(dict):
         del self.__dict__[key]
 
     def __loop_dict(self, my_dict):
-        """Loop and set attributes in BigDict format"""
+        """Loop and set attributes in SickDict format"""
         for k, v in my_dict.items():
             if isinstance(v, dict):
-                v = BigDict(v)
+                v = SickDict(v)
             if isinstance(v, list):
                 self.__convert(v)
             setattr(self, k, v)
 
     def __convert(self, v):
-        """Convert the list of dicts to the BigDict format"""
+        """Convert the list of dicts to the SickDict format"""
         for elem in range(0, len(v)):
             if isinstance(v[elem], dict):
-                v[elem] = BigDict(v[elem])
+                v[elem] = SickDict(v[elem])
             elif isinstance(v[elem], list):
                 self.__convert(v[elem])
 
