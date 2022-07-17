@@ -1,103 +1,54 @@
-# Introduction  
+# BigDict
+An IDE friendly (auto-completion) python dictionary with dot-accessible attributes.
 
-**Colored Output = c_out**  
+# Why?
+- The pythonic way to access the dictionary `d['key']` is prone to errors and honestly, pretty ugly.
+- The case becomes worse when the dictionary is a nested one `d['key1]['key2']`. Now obviously d.key1.key2.key3 is much better.
+- Default python dictionary does not support auto-completion in almost all the IDE's, but BigDict will.
 
-You don't have to tell me how monotonous it is to use the same old print statement in python, as there is no option to format it. Moreover, we all have faced problems while debugging our code with countless print statements but no way to highlight any of it.
-
-Well we can definitely install/import third-party packages, but some of us just prefer the old school solutions.
-
-I have a simple, yet effective solution for you.
-What if I tell you, it is possible to create a custom class yourself which can format the output in the terminal?
-
-Using this module you can directly format the output you see in your command line interface **without using any external packages**.  
-It uses **ANSI Escape Codes** to format the standard output.
-  
-# Installation
+# How to use it?
+1. Install the package:
+```console
+pip install big_dict
 ```
-pip install c_out
-```
-
-# Usage
-
-## Import
+2. Import the package:
 ```python
-from c_out.beauty_print import c_out, TextColor, BackgroundColor, Style
+from big_dict import BigDict
 ```
 
-## Different Ways to use
-
-#### Normal print
+# Features
+1. Create a dictionary without defining it keys beforehand
 ```python
-c_out("Hello World")  
+bd = BigDict()
+bd.hello = "world"
 ```
-
-#### Print with just text color
+2. Pass a dictionary and all the keys in dictionary will become properties
 ```python
-c_out("Hello World", text_color=TextColor.BLUE)  
+d = {'hello': 'world'}
+bd = BigDict(d)
+print(bd.hello)     # world
 ```
-
-#### Print with just background color
+You can also pass a nested dictionary
+3. Pass keyword arguments and all the arguments will become properties
 ```python
-c_out("Hello World", bg_color=BackgroundColor.BLACK)  
+bd = BigDict(hello="world", this_is="awesome")
+print(bd.hello)     # world
+print(bd.this_is)     # awesome
 ```
-
-#### Print with text color and background color
+4. Pass both dictionary and keyword arguments
 ```python
-c_out("Hello World", text_color=TextColor.RED, bg_color=BackgroundColor.BLACK, styles=[Style.BOLD])  
+d = {'hello': 'world'}
+bd = BigDict(d, this_is="awesome")
+print(bd.hello)     # world
+print(bd.this_is)     # awesome
 ```
-
-#### Print with text color, background color and font styles
+5. Pass a nested dictionary with a list
 ```python
-c_out("Hello World", text_color=TextColor.RED, bg_color=BackgroundColor.BLACK, styles=[Style.BOLD])  
-c_out("Hello World", text_color=TextColor.RED, bg_color=BackgroundColor.BLACK, styles=[Style.BOLD, Style.STRIKETHROUGH, Style.ITALIC])
+foo = {
+    "bar" : {
+        "baz" : [{"boo" : "hoo"}, {"baba" : "loo"}]
+    }
+}
+bd = BigDict(foo)
+print(bd.bar.baz[0].boo)     # hoo
 ```
-
-#### Print with separator and text color
-```python
-c_out("Hello", "World", text_color=TextColor.RED, sep='\n')  
-```
-
-#### Print with end of line and text color
-```python
-c_out("Hello", "World", text_color=TextColor.RED, end='\t')  
-```
-
-
-And there are many more combinations that you can try yourself.
-
-
-# Choices
-
-### Current Choices for TextColor
-- BLACK
-- RED
-- GREEN
-- ORANGE
-- BLUE
-- PURPLE
-- CYAN
-- LIGHTGREY
-- DARKGREY
-- LIGHTRED
-- LIGHTGREEN
-- YELLOW
-- LIGHTBLUE
-- PINK
-- LIGHTCYAN
-
-### Current Choices for BackgroundColor
-- BLACK
-- RED
-- GREEN
-- ORANGE
-- BLUE
-- PURPLE
-- CYAN
-- LIGHTGREY
-
-### Current choices for Styles
-- BOLD
-- UNDERLINE
-- ITALIC
-- STRIKETHROUGH
-- SELECTED
