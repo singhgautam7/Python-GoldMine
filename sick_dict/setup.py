@@ -8,7 +8,7 @@ setup(
     description='SickDict - An IDE-friendly python dictionary',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version='0.1',
+    version='0.2',
     license='MIT',
     author="Gautam Rajeev Singh",
     author_email='gautamsingh1997@gmail.com',

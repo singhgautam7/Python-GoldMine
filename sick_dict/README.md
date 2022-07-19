@@ -52,3 +52,23 @@ foo = {
 sd = SickDict(foo)
 print(sd.bar.baz[0].boo)     # hoo
 ```
+
+6. Use `del` keyword to remove a key
+```python
+sd = SickDict(hello="world", this_is="awesome")
+del sd.hello
+print(sd.hello)     # Key
+```
+
+7. Use `+` operator to combine two instances of SickDict
+```python
+sd1 = SickDict(hello="world")
+print(sd1)      # SickDict({'hello': 'world'})
+
+sd2 = SickDict(this_is="awesome")
+print(sd2)      # SickDict({'this_is': 'awesome'})
+
+print(sd1 + sd2)    # SickDict({'hello': 'world', 'this_is': 'awesome'})
+```
+
+9. Use other dictionary functions like `get()`, `update()` etc.
