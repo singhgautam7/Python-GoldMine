@@ -71,3 +71,10 @@ print(sd1 + sd2)    # SickDict({'hello': 'world', 'this_is': 'awesome'})
 ```
 
 9. Use other dictionary functions like `get()`, `update()` etc.
+```python
+sd = SickDict(hello="world")
+print(sd.get('hello'))     # world
+
+sd.update({'who_are_you': 'developer'}, this_is="awesome")
+print(sd)      # SickDict({'hello': 'world', 'who_are_you': 'developer', 'this_is': 'awesome'})
+```
