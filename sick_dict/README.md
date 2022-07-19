@@ -28,7 +28,6 @@ d = {'hello': 'world'}
 sd = SickDict(d)
 print(sd.hello)     # world
 ```
-You can also pass a nested dictionary
 3. Pass keyword arguments and all the arguments will become properties
 ```python
 sd = SickDict(hello="world", this_is="awesome")
